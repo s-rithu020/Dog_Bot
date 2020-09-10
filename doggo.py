@@ -1,6 +1,7 @@
-!pip install python-telegram-bot
+
 from telegram.ext import Updater, CommandHandler
 import requests #getting data from cloud
+import os
 
 def get_url():
   contents = requests.get('https://random.dog/woof.json').json()
