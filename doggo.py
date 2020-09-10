@@ -1,4 +1,3 @@
-
 from telegram.ext import Updater, CommandHandler
 import requests #getting data from cloud
 import os
