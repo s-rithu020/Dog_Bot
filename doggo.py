@@ -12,7 +12,8 @@ def dog(bot,update):
   chat_id = update.message.chat_id
   bot.send_photo(chat_id,photo=url)
 
-u = Updater('1032331580:AAFmatXB9N_uu0bXT6oaXSsaGJ04Jg_mItw')
+TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
+u = Updater('TELEGRAM_TOKEN',use_context=True)
 dp = u.dispatcher
 dp.add_handler(CommandHandler('dog',dog))
 u.start_polling()
