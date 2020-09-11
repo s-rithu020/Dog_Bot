@@ -13,7 +13,7 @@ def dog(bot,update):
   bot.send_photo(chat_id,photo=url)
 
 TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
-u = Updater('TELEGRAM_TOKEN',use_context=True)
+u = Updater('TELEGRAM_TOKEN',use_context= True)
 dp = u.dispatcher
 dp.add_handler(CommandHandler('dog',dog))
 u.start_polling()
